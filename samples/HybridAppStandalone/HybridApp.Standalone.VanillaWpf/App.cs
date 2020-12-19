@@ -8,7 +8,7 @@ using Xamarin.Forms.Platform.WPF.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.MobileBlazorBindings;
-using Microsoft.MobileBlazorBindings.Elements;
+//using Microsoft.MobileBlazorBindings.Elements;
 using Microsoft.Extensions.Hosting;
 using System.CodeDom;
 using System.Windows.Controls;
@@ -30,7 +30,7 @@ namespace HybridApp.VanillaWpfTest
         {
             // bootstrapping code that would typically be pushed down to the platform-agnostic level (HybridApp.App)
             // leaving it here so as not to touch the rest of the solution for now
-            var hostBuilder = MobileBlazorBindingsHost.CreateDefaultBuilder(args)
+            var hostBuilder = MobileBlazorBindingsHost.CreateDefaultBuilder()//args)
                 .ConfigureServices((hostContext, services) =>
                 {
                     // Adds web-specific services such as NavigationManager

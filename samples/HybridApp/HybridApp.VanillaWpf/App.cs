@@ -67,7 +67,7 @@ namespace HybridApp.VanillaWpfTest
             _host.AddComponent<Main>(parent: xfContentPage);
 
             // optional, create a vanilla WPF container of some sort (here, a Grid)
-            var grid = new Grid();
+            var grid = new System.Windows.Controls.Grid();
 
             // create a top-level vanilla WPF window, with the Grid as it's content
             var window = new Window { Content = grid };

@@ -8,6 +8,15 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
+  
+  <!--Weird necessity to keep Xamarin Forms from throwing a compile-time error when
+      there are existing "vanilla" UserControls in the WPF solution:
+      "Error : XamlC error XFC0000 : Cannot resolve type "Application".". See here:
+      https://github.com/xamarin/Xamarin.Forms/issues/11101#issuecomment-678329339
+      (AC-1081)-->
+  <ItemGroup>
+    <EmbeddedResource Remove="**/*.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.MobileBlazorBindings.WebView.Windows" Version="0.5.50-preview" />
